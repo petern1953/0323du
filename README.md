@@ -5,6 +5,7 @@ https://github.com/petern1953/final0323du/blob/main/src/app/page/user-list/user-
 #### 3. rendezés tetszőleges oszlop szerint -- csak növekvő, sorter pipe
 https://github.com/petern1953/final0323du/blob/main/src/app/pipe/sorter.pipe.ts#L6
 #### 4. update record
+https://github.com/petern1953/final0323du/blob/main/src/app/page/user-editor/user-editor.component.ts#L40
 #### 5. validation, error message, button disable while userForm.invalid
 #### 6. create, gomb a táblázat felett, routerLink navigation, validation
 
