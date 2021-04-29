@@ -11,6 +11,7 @@ https://github.com/petern1953/final0323du/blob/main/src/app/page/user-editor/use
 #### email-pattern
 https://github.com/petern1953/final0323du/blob/main/src/app/page/user-editor/user-editor.component.ts#L40
 #### 6. create, gomb a táblázat felett, routerLink navigation, validation
+https://github.com/petern1953/final0323du/blob/main/src/app/page/user-list/user-list.component.html#L6
 
 ### 1. A megjelenő táblázatban készítsd el a törlés funkcionalitást! ok
 - ok A törlés gombra kattintva a példa adatbázisból törlődjön az adott rekord. 
