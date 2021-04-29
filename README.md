@@ -1,9 +1,9 @@
-#### törlés, confirm, CRUD Observable-lal
-### szűrés egy mezőre, filter pipe, input mező a táblázat felett
-### rendezés tetszőleges oszlop szerint -- csak növekvő, sorter pipe
-### update record
-### validation, error message, button disable while userForm.invalid
-### create, gomb a táblázat felett, routerLink navigation, validation
+#### 1. törlés, confirm, CRUD Observable-lal
+#### 2. szűrés egy mezőre, filter pipe, input mező a táblázat felett
+#### 3. rendezés tetszőleges oszlop szerint -- csak növekvő, sorter pipe
+#### 4. update record
+#### 5. validation, error message, button disable while userForm.invalid
+#### 6. create, gomb a táblázat felett, routerLink navigation, validation
 
 ### 1. A megjelenő táblázatban készítsd el a törlés funkcionalitást! ok
 - ok A törlés gombra kattintva a példa adatbázisból törlődjön az adott rekord. 
