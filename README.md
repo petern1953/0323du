@@ -3,6 +3,7 @@ https://github.com/petern1953/final0323du/blob/main/src/app/service/user.service
 #### 2. szűrés egy mezőre, filter pipe, input mező a táblázat felett
 https://github.com/petern1953/final0323du/blob/main/src/app/page/user-list/user-list.component.html#L31
 #### 3. rendezés tetszőleges oszlop szerint -- csak növekvő, sorter pipe
+https://github.com/petern1953/final0323du/blob/main/src/app/pipe/sorter.pipe.ts#L6
 #### 4. update record
 #### 5. validation, error message, button disable while userForm.invalid
 #### 6. create, gomb a táblázat felett, routerLink navigation, validation
