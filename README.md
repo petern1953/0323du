@@ -1,4 +1,4 @@
-### törlés, confirm, CRUD Observable-lal
+#### törlés, confirm, CRUD Observable-lal
 ### szűrés egy mezőre, filter pipe, input mező a táblázat felett
 ### rendezés tetszőleges oszlop szerint -- csak növekvő, sorter pipe
 ### update record
