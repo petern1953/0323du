@@ -7,6 +7,7 @@ https://github.com/petern1953/final0323du/blob/main/src/app/pipe/sorter.pipe.ts#
 #### 4. update record
 https://github.com/petern1953/final0323du/blob/main/src/app/page/user-editor/user-editor.component.ts#L40
 #### 5. validation, error message, button disable while userForm.invalid
+https://github.com/petern1953/final0323du/blob/main/src/app/page/user-editor/user-editor.component.html#L31
 #### email-pattern
 https://github.com/petern1953/final0323du/blob/main/src/app/page/user-editor/user-editor.component.ts#L40
 #### 6. create, gomb a táblázat felett, routerLink navigation, validation
