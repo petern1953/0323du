@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 import { User } from 'src/app/model/user';
@@ -9,10 +8,9 @@ import { UserService } from 'src/app/service/user.service';
 @Component({
   selector: 'app-user-editor',
   templateUrl: './user-editor.component.html',
-  styleUrls: ['./user-editor.component.scss']
+  styleUrls: ['./user-editor.component.scss'],
 })
 export class UserEditorComponent implements OnInit {
-
   /**
    * user$ {Observable<User>}
    * Can be two different type of User:
@@ -20,7 +18,7 @@ export class UserEditorComponent implements OnInit {
    * 2. If the params.id isn't 0: a user from the database based on its id.
    */
   user$: Observable<User> = this.activatedRoute.params.pipe(
-    switchMap( params => {
+    switchMap((params) => {
       if (Number(params.id) === 0) {
         return of(new User());
       }
@@ -29,12 +27,29 @@ export class UserEditorComponent implements OnInit {
     })
   );
 
+  emailPattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
   constructor(
     private userService: UserService,
     private activatedRoute: ActivatedRoute,
-  ) { }
+    private router: Router
+  ) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void { }
+
+  setToDB(user: User): void {
+    if (user.id == 0) {
+      this.userService.create(user).subscribe(
+        () => {
+          this.router.navigate(['/']);
+        }
+      );
+    } else {
+      this.userService.update(user).subscribe(
+        () => {
+          this.router.navigate(['/']);
+        }
+      )
+    }
   }
-
 }

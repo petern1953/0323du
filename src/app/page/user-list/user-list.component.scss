@@ -1,0 +1,11 @@
+tr.tableHead th {
+  cursor: pointer;
+
+  &:hover {
+    background-color: #eee;
+  }
+}
+
+.active {
+      color: #f77;
+}

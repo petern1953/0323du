@@ -10,7 +10,12 @@
         class="form-control"
         type="text"
         name="name"
-        [(ngModel)]="user.name">
+        [(ngModel)]="user.name"
+        required
+        pattern=".{8,40}">
+        <div [hidden]="userForm.controls.name?.valid || userForm.controls.name?.pristine" class="error__message">
+          Required field! Must be 8 to 40 chars of length.
+        </div>
       </div>
       <div class="form-group">
         <label>Email</label>
@@ -20,16 +25,26 @@
           class="form-control"
           type="text"
           name="email"
-          [(ngModel)]="user.email">
+          [(ngModel)]="user.email"
+          required
+          [pattern]="emailPattern">
+          <div [hidden]="userForm.controls.email?.valid || userForm.controls.email?.pristine" class="error__message">
+            Required field! Must follow valid e-mail layout.
+          </div>
         </div>
         <div class="form-group">
           <label>Address</label>
-          <!-- Validation: min 8 char, max 100 char, required -->
+          <!-- Validation: min 8 char, max 100 chars, required -->
           <input
           class="form-control"
           type="text"
           name="address"
-          [(ngModel)]="user.address">
+          [(ngModel)]="user.address"
+          required
+          pattern=".{8,100}">
+          <div [hidden]="userForm.controls.address?.valid || userForm.controls.address?.pristine" class="error__message">
+            Required field! Must be 8 to 100 chars of length.
+          </div>
       </div>
       <div class="form-group">
         <label>Active</label>
@@ -39,7 +54,8 @@
           <option [ngValue]="false">inactive</option>
         </select>
       </div>
-      <button type="submit" class="btn btn-primary btn-block mt-5">
+      <button (click)="setToDB(user)" type="submit" class="btn btn-primary btn-block mt-5"
+        [disabled]="userForm.invalid">
         <i class="fa fa-save"></i>
       </button>
     </form>
